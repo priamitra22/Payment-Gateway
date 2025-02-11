@@ -11,7 +11,6 @@ This repository contains the backend implementation of a **Payment Gateway** usi
 - [Midtrans API](#midtrans-api)
 - [Database Setup](#database-setup)
 - [Environment Variables](#environment-variables)
-- [License](#license)
 
 ## Introduction
 
@@ -38,16 +37,22 @@ Make sure you have the following installed:
 ### Installation Steps
 
 1. Clone the repository:
+
+   ```bash
    git clone https://github.com/your-username/Payment-Gateway.git
    cd Payment-Gateway
-Install dependencies:
-npm install
+   
+2.Install dependencies:
+```bash
+   npm install
+```
 
-Set up the database:
+3.Set up the database:
 
 Create a new MySQL database named internet_packages.
 Import the schema from the database.sql file.
-Configure environment variables:
+
+4.Configure environment variables:
 
 Create a .env file in the root directory and configure the following environment variables:
 DB_HOST=localhost
@@ -61,15 +66,13 @@ MIDTRANS_CLIENT_KEY=Mid-client-gWgG7cRX1kSBmHYQ
 MIDTRANS_IS_PRODUCTION=true
 Replace Mid-server-ggsj3m11q8rxlA165bdSiBbi and Mid-client-gWgG7cRX1kSBmHYQ with your own Midtrans server and client keys.
 
-Start the server:
-
-npm start
-The backend server will be running on http://localhost:5000.
-
-API Configuration
+5.Start the server:
+```bash
+   npm start
+```
+## API Configuration
 To integrate Midtrans with this project, the following configuration is required in the server:
-
-
+```bash
 const midtransClient = require("midtrans-client");
 
 const snap = new midtransClient.Snap({
@@ -79,9 +82,9 @@ const snap = new midtransClient.Snap({
 });
 
 module.exports = snap;
-The above configuration sets up Midtrans with sandbox mode (isProduction: false). Replace the serverKey and clientKey with your own keys for production or sandbox.
+```
 
-Midtrans API
+## Midtrans API
 Midtrans provides a powerful API for handling payments. We use their Snap API to generate payment links and handle transaction notifications.
 
 For detailed API documentation, visit the Midtrans Documentation.
@@ -93,7 +96,7 @@ MySQL: Make sure you have MySQL running locally or on a remote server.
 Create Database: Create a database called internet_packages.
 Tables: Import the schema and set up tables for packages, transactions, etc.
 Example Table Schema
-
+```bash
 CREATE TABLE packages (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
@@ -112,10 +115,10 @@ CREATE TABLE transactions (
   transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (package_id) REFERENCES packages(id)
 );
-
-
-Environment Variables
+```
+## Environment Variables
 The following environment variables are required to run the application:
+
 DB_HOST: Database host (default localhost)
 DB_USER: Database username (default root)
 DB_PASSWORD: Database password (leave empty for no password)
@@ -124,6 +127,5 @@ PORT: Port on which the server will run (default 5000)
 MIDTRANS_SERVER_KEY: Server key for Midtrans API (Production/Sandbox)
 MIDTRANS_CLIENT_KEY: Client key for Midtrans API
 MIDTRANS_IS_PRODUCTION: Set to true for production, false for sandbox mode
-
 
 Developed by Priamitra
