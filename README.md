@@ -1,1 +1,10 @@
 # Payment-Gateway
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=internet_packages
+PORT=5000
+PORT=5000
+MIDTRANS_SERVER_KEY=Mid-server-ggsj3m11q8rxlA165bdSiBbi
+MIDTRANS_CLIENT_KEY=Mid-client-gWgG7cRX1kSBmHYQ
+MIDTRANS_IS_PRODUCTION=true
