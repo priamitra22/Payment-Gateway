@@ -125,7 +125,5 @@ MIDTRANS_SERVER_KEY: Server key for Midtrans API (Production/Sandbox)
 MIDTRANS_CLIENT_KEY: Client key for Midtrans API
 MIDTRANS_IS_PRODUCTION: Set to true for production, false for sandbox mode
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 Developed by Priamitra
