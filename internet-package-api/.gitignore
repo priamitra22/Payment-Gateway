@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+build/
+dist/
+
+# Log files
+*.log
+
+# MacOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Other files to ignore
+.idea/
