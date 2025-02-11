@@ -55,6 +55,7 @@ Import the schema from the database.sql file.
 4.Configure environment variables:
 
 Create a .env file in the root directory and configure the following environment variables:
+```bash
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
@@ -65,6 +66,7 @@ MIDTRANS_SERVER_KEY=Mid-server-ggsj3m11q8rxlA165bdSiBbi
 MIDTRANS_CLIENT_KEY=Mid-client-gWgG7cRX1kSBmHYQ
 MIDTRANS_IS_PRODUCTION=true
 Replace Mid-server-ggsj3m11q8rxlA165bdSiBbi and Mid-client-gWgG7cRX1kSBmHYQ with your own Midtrans server and client keys.
+```
 
 5.Start the server:
 ```bash
